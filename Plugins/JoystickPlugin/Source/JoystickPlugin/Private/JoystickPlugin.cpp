@@ -24,6 +24,10 @@ IMPLEMENT_MODULE(FJoystickPlugin, JoystickPlugin)
 void FJoystickPlugin::StartupModule()
 {
 	IJoystickPlugin::StartupModule();
+	FString sdlDir("Plugins/UEJoystickPlugin/Plugins/JoystickPlugin/Source/ThirdParty/SDL2-2.0.10/lib/x64/SDL2.dll");
+	FString DllRelativePath = FPaths::ProjectDir() + sdlDir;
+	FString DllPath = IFileManager::Get().ConvertToAbsolutePathForExternalAppForRead(*DllRelativePath);
+	void* DLLHandle = FPlatformProcess::GetDllHandle(*DllPath);
 	JoystickDevice = MakeShareable(new ::FJoystickDevice());
 	//return;
 
