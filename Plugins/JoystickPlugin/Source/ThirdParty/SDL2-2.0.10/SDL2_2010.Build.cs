@@ -22,7 +22,7 @@ public class SDL2_2010 : ModuleRules
         if (Target.Platform == UnrealTargetPlatform.Win64)
 		{
 			PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "x64", "SDL2.lib"));
-			PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "x64", "SDL2main.lib"));
+			//PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "x64", "SDL2main.lib"));
             PublicDelayLoadDLLs.Add("SDL2.dll");            
         }
         

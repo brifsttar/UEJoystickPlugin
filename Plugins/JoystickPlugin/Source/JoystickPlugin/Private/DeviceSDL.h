@@ -17,6 +17,7 @@
 // @third party code - BEGIN SDL
 #include "Windows/AllowWindowsPlatformTypes.h"
 
+#pragma warning (disable: 4668)
 #include "SDL.h"
 #include "SDL_joystick.h"
 #include "SDL_gamecontroller.h"
