@@ -163,7 +163,7 @@ FDeviceInfoSDL FDeviceSDL::AddDevice(FDeviceIndex DeviceIndex)
 			UE_LOG(JoystickPluginLog, Log, TEXT("SDL_HAPTIC_AUTOCENTER support: %i"), (SDL_HapticQuery(Device.Haptic) & SDL_HAPTIC_AUTOCENTER));
 
 			
-			if (SDL_HapticRumbleInit(Device.Haptic) != -1)
+			/*if (SDL_HapticRumbleInit(Device.Haptic) != -1)
 			{
 				UE_LOG(JoystickPluginLog, Log, TEXT("--- testing Rumble device:"));
 				if (SDL_HapticRumblePlay(Device.Haptic, 0.5, 2000) != 0)
@@ -180,7 +180,7 @@ FDeviceInfoSDL FDeviceSDL::AddDevice(FDeviceIndex DeviceIndex)
 			}
 			else {
 				UE_LOG(JoystickPluginLog, Log, TEXT("ERROR HapticRumbleInit FAILED"));
-			}
+			}*/
 			
 
 		}
