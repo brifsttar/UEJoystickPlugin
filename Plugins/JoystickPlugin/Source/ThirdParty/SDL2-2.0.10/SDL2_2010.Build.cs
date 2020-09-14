@@ -23,7 +23,8 @@ public class SDL2_2010 : ModuleRules
 		{
 			PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "x64", "SDL2.lib"));
 			//PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "x64", "SDL2main.lib"));
-            PublicDelayLoadDLLs.Add("SDL2.dll");            
+			RuntimeDependencies.Add(Path.Combine(ModuleDirectory, "lib", "x64", "SDL2.dll"));
+			PublicDelayLoadDLLs.Add("SDL2.dll");
         }
         
     }
